@@ -1,0 +1,68 @@
+1. SOAP (Simple Object Access Protocol):
+	It is outdated protocol, was a star of it's era.
+
+	If my application in java wants to talk to an application in python, we need to convert objects to XML files.
+
+	Then the files get serialized send over the wire or network and de-serialized.
+
+	Challenges:
+		1. XML:
+			It supported only XML and hence the system was slow, the majority of transfer data included metadata about XML.
+
+2. REST (Representational State Transfer):
+	It says that we allow different files like JSON, txt including XML. 
+
+	It is built on top of http protocol.
+	They are stateless and easy to scale applications.
+
+	It was popular due to support for JSON, as it is quiet light and allowed fast communication.
+
+	Why Representational: (Image)
+
+Idempotent:
+	When we call the API endpoint again and again it returns us the same data every time.
+	Ex: GET, PUT (Not Cacheable), DELETE
+
+Non-Idempotent:
+	The data returned by the server changes with every request.
+	Ex: POST
+
+PUT vs PATCH:
+	For updating the data using put we need to resend the whole object.
+	For updating the data using patch we need to only send the updated attribute.
+
+OSI(Open System Interconnection) is a 7 layer model.
+It is a vast topic in networking.
+
+3. HTTP:
+	HTTP is a method for encoding and transporting information between a client (such as a web browser) and a web server. HTTP is the primary protocol for transmission of information across the internet.
+
+	HTTP is an application layer protocol relying on lower-level protocols such as TCP and UDP.
+
+4. TCP (Transfer Control Protocol):
+	TCP is a connection-oriented protocol over an IP network. Connection is established and terminated using a handshake. 
+
+	All packets sent are guaranteed to reach the destination in the original order and without corruption through:
+		1. Sequence numbers and checksum fields for each packet.
+		2. Acknowledgement packets and automatic re-transmission.
+
+	Use TCP over UDP when:
+		1. You need all of the data to arrive intact.
+		
+		2. You want to automatically make a best estimate use of the network throughput.
+
+5. UDP (User Datagram Protocol):
+	UDP is connection-less. Datagrams (analogous to packets) are guaranteed only at the datagram level. 
+	
+	Datagrams might reach their destination out of order or not at all. UDP does not support congestion control. 
+
+	Without the guarantees that TCP support, UDP is generally more efficient.
+
+	Use Cases:
+		The video streaming applications where the data might be lagging not reaching but it is being send.
+
+	Use UDP over TCP when:
+		1. You need the lowest latency.
+		2. Late data is worse than loss of data.
+		3. You want to implement your own error correction.
+

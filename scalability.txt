@@ -1,0 +1,51 @@
+Data:
+	Humongous amount of data has made the storage and computation of that data utterly complex.
+	Storage and Computation are the basic or trivial operations we perform on data.
+
+Consistency:
+	For some data, if we make multiple queries and all of them return the same data we call a system consistent.
+
+Availability:
+	A system is said to be available if it returns some response, even though the response be an error or inconsistent data.
+	It is measure in terms of 9.
+
+	Ex: 99% available meaning 3.65 days of down time in a year.
+
+Reliability:
+	It is given by 1 - P(failure)
+	High reliability denotes high availability.
+	High availability doesn't always guarantee high reliability.
+
+Ex:
+	Suppose, we have an application and the current capacity of the server is 500GB. If somehow our app becomes popular we need to add more storage to avoid data loss.
+
+Vertical Scaling:
+	It is a strategy where we have one single server and keep on adding infrastructure to meet the needs.
+
+	Problems:
+		1. Beyond time there is no performance improvement.
+		2. Single machine provides a single point of failure.
+		3. Hardware limitation -> We cannot keep on increasing the RAM & Storage.
+
+Horizontal Scaling / Distributed Systems:
+	A group of machines connected over a network. It is also known as cluster of data.
+
+	When the distributed system was first invented, the companies were losing data left and right.
+
+	Problems:
+		Network Partitioning:
+			One machine gets disconnected over the network.
+
+	Solution:
+		If we have distributed system, copy data on multiple machines not only on one machine.
+		It brought the problem of consistency, the system would eventually go into the consistent state.
+
+CAP Theorem:
+	C -> Consistency
+	A -> Availability
+	P -> Partition Tolerance
+
+	The theorem states that we cannot have all the three facilities simultaneously when we design a system.
+
+	In modern application we cannot leave partition failure behind.
+	Hence, when designing we need to choose between Consistency & Availability. 

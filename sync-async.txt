@@ -1,0 +1,71 @@
+Synchronous/Blocking:
+	The processes must be completed in the order they arrived.
+	The next request can only be processed after the current has completed it's execution.
+
+	Use Cases:
+		1. Rate of Acceptance = Rate of Creation:
+			Ex: We have two applications communicating over a network.
+			Both have the capacity to send and receive 50 req/sec.
+
+		2. Transaction Processing:
+			BookMyShow -> We first need to get the payment & there after the seat must be deducted from inventory and assigned to the buyer.
+
+		3. Order of execution.
+
+	Challenges:
+		1. Wait Time Increases:
+			If each request takes 15 sec to process, then the thread is waiting for 15 sec and is useless.
+
+		2. Waiting Queue:
+			Suppose the rate of sending is 200 requests and the server can only process 100, hence this leads to cascading failure.
+
+
+Asynchronous/Non Blocking:
+	Once the request has been sended, the client can still perform other task and the job is completed in background.
+
+	Use Cases:
+		1. When the throughput are different, we can definitely use asynchronous.
+
+	Advantages:
+		1. It helps to scale the application.
+
+Implementation Of Asynchronous System:
+	1. Callback Approach: (Photo explanation)
+
+	2. Message Queue:
+		Message queues receive, hold, and deliver messages. If an operation is too slow to perform inline, you can use a message queue with the following workflow:
+
+		Features:
+			An application publishes a job to the queue, then notifies the user of job status.
+
+			A worker picks up the job from the queue, processes it, then signals the job is complete.
+
+			The user is not blocked and the job is processed in the background.
+
+			For example, if posting a tweet, the tweet could be instantly posted to your timeline, but it could take some time before your tweet is actually delivered to all of your followers.
+
+		Types:
+			1. P2P:
+				It is peer to peer communication only between two machines.
+
+			2. Broadcasting:
+				Several apps are looking for the same data, we prefer this scheme.
+
+Queues:
+	1. Redis:
+		It is useful as a simple message broker but messages can be lost.
+
+	2. Rabbit MQ:
+		It is popular but requires you to adapt to the 'AMQP' protocol and manage your own nodes.
+
+	3. Kafka:
+		Both P2P & Broadcasting supported.
+		Features:
+			1. Guarantees ordered message delivery.
+			2. There will be no message loss. We can decide the duration till which data has to  persistent.
+
+		Analogy:
+			Producer, Consumer, Topic -> Offset.
+
+Back Pressure:
+	The queue gets full and the throughput decreases, hence the system can respond with 503 until lot of messages have completed processing. 

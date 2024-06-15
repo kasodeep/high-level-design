@@ -1,0 +1,17 @@
+Step1:
+	Outline the use cases, constraints & assumptioms.
+	Mark down the requirements both functional and non-functional.
+
+Step2:
+	Ask for the back of the envelope calculations.
+
+Step3:
+	Create a high level design.
+	Start with the basic one and keep on improving.
+
+Step4:
+	Design core components, and also the communication approach between them.
+	NoSql, sql database selection, api and object oriented design.
+
+Step5:
+	Ask for scaling requirements and try to perform the practiced methods.
