@@ -1,6 +1,6 @@
 # Stateful Systems
 
-## Practical Example
+## Practical Example ![Image](statefull-stateless.png)
 
 - **Scenario**: Suppose we have developed Amazon with geographically distributed instances.
   - When a user visits, the **load balancer** assigns them to a machine where they can add items to their cart.

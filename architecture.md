@@ -2,11 +2,11 @@
 
 ## Server
 
-A server is a never-ending process running on a computer that provides resources, data, services, or programs to other computers, known as clients, over a network.
+A server is a never-ending `process` running on a computer that provides `resources`, data, services, or programs to other computers, known as clients, over a network.
 
 ## Client
 
-Anyone requesting a piece of information or data is called a client. Usually, they request it from the server.
+Anyone `requesting` a piece of information or data is called a client. Usually, they request it from the server.
 
 ## Latency
 
@@ -34,16 +34,16 @@ Anyone requesting a piece of information or data is called a client. Usually, th
   4. Network Optimization.
   5. Parallel Processing.
 
-## Consistency
+## Consistency (Time Up)
 
-A system is considered **consistent** if multiple queries to it return the same data.
+A system is considered **consistent** if multiple queries to it return the `same` data.
 
 ## Availability
 
-A system is said to be **available** if it returns some response, even if the response is an error or inconsistent data.
+A system is said to be **available** if it returns some `response`, even if the response is an error or inconsistent data.
 
 - **Measure**: Availability is measured in terms of "9s".
-  - Example: **99% availability** implies a downtime of approximately 3.65 days per year.
+  - Example: **99% availability** implies a downtime of approximately `3.65` days per year.
 
 ## Reliability
 
@@ -52,28 +52,27 @@ A system is said to be **available** if it returns some response, even if the re
 - **High Reliability**: Implies fewer failures and better availability.
 - **Key Point**: High availability does not always guarantee high reliability.
 
-### Eventual Consistency
+### Eventual Consistency (Time Low)
 
 - In distributed systems, the system may not always return consistent data immediately.
-- Over time, given no new updates, all nodes will eventually become consistent.
+- Over time, given no new updates, all nodes will `eventually` become consistent.
 
 ### Fault Tolerance
 
-- The ability of a system to continue functioning even when one or more components fail.
+- The ability of a system to continue functioning even when one or more components `fail`.
 - Achieved through redundancy, replication, and error handling mechanisms.
 
-## Monolithic Architecture
+## Monolithic Architecture ![Image](monolithic.png)
 
 A system where there is a single codebase, and every piece of code runs on the same machine. All services are grouped together.
 
 ### Example
 
-A web application where:
+A web application with:
 
-- Front-end,
-- Back-end,
-- Database,  
-  ... are all hosted together.
+- Front-end
+- Back-end
+- Database
 
 ### Advantages/Use Cases
 
@@ -127,7 +126,7 @@ A design paradigm that emphasizes making systems granular by dividing services.
 3. **Testing Complexity**:
    - Testing distributed systems is significantly harder. _(Example: Instagram testing by Facebook)_
 
-## Microservices
+## Microservices ![Image](microservices.png)
 
 A more granular and stricter version of SOA. In microservices:
 

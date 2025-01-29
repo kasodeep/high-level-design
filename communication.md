@@ -2,8 +2,8 @@
 
 ## 1. SOAP (Simple Object Access Protocol)
 
-- SOAP is an **outdated protocol** but was popular during its era.
-- It enabled communication between applications written in different languages (e.g., Java and Python) by converting objects to **XML files**.
+- SOAP is an `outdated protocol` but was popular during its era.
+- It enabled communication between applications written in different languages (e.g., Java and Python) by converting objects to `XML files.`
 - These XML files were serialized, sent over the network, and de-serialized at the receiving end.
 
 ### Challenges:
@@ -12,16 +12,12 @@
    - Supported only XML, making the system slow.
    - Most of the transferred data included metadata about XML, adding overhead.
 
-## 2. REST (Representational State Transfer)
+## 2. REST (Representational State Transfer) ![Image](rest.png)
 
 - REST supports various file formats, including **JSON**, **text**, and **XML**.
 - Built on top of the **HTTP protocol**.
 - It is **stateless** and allows for easy scaling of applications.
 - Gained popularity due to JSON support, which is lightweight and enables faster communication.
-
-### Why "Representational"?
-
-- The term comes from the concept of representing resources as images, JSON objects, or XML documents.
 
 ### Idempotency:
 
@@ -44,6 +40,8 @@
 - HTTP is a method for encoding and transporting information between a **client** (e.g., web browser) and a **server**.
 - It is the primary protocol for internet communication.
 - Operates at the **application layer**, relying on lower-level protocols like **TCP** and **UDP**.
+
+![Image](tcp-udp.png)
 
 ## 4. TCP (Transfer Control Protocol)
 

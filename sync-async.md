@@ -1,6 +1,6 @@
 # Synchronous (Blocking) Systems
 
-- **Definition**: Processes must complete in the order they arrive. The next request starts only after the current request completes.
+- **Definition**: Processes must complete in the `order` they arrive. The next request starts only after the `current` request completes.
 
 ### **Use Cases**
 
@@ -15,7 +15,7 @@
 
 # Asynchronous (Non-Blocking) Systems
 
-- **Definition**: After sending a request, the client can perform other tasks while the operation completes in the background.
+- **Definition**: After sending a request, the client can perform other tasks while the `operation` completes in the background.
 
 ### **Use Cases**
 
@@ -29,7 +29,7 @@
 
 ### 1. **Callback Approach**
 
-- Uses callback functions to handle responses once the background operation completes.
+- Uses `callback` functions to handle responses once the background operation completes.
 
 ### 2. **Message Queues**
 

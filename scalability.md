@@ -1,26 +1,18 @@
-# Key Concepts in Data Management and System Design
-
 ## Data
 
-With the humongous amount of data generated today, its storage and computation have become increasingly complex. Storage and computation are the fundamental operations we perform on data.
+With the humongous amount of data generated today, its `storage` and `computation` have become increasingly complex. Storage and computation are the fundamental operations we perform on data.
 
----
-
-## Scaling
-
-### Vertical Scaling
+## Vertical Scaling ![Image](vertical.png)
 
 - A strategy of adding more resources (RAM, CPU, storage) to a single machine to meet increased demand.
 
 #### Problems
 
-1. **Performance Ceiling**: Performance improvements diminish beyond a certain point.
-2. **Single Point of Failure**: If the machine fails, the entire system goes down.
+1. **Performance Ceiling**: Performance improvements `diminish` beyond a certain point.
+2. **Single Point of Failure**: If the machine `fails`, the entire system goes down.
 3. **Hardware Limitations**: Physical limits to increasing RAM, storage, and CPU capacity.
 
----
-
-### Horizontal Scaling / Distributed Systems
+## Horizontal Scaling / Distributed Systems ![Image](horizontal.png)
 
 - Involves connecting multiple machines over a network to form a cluster that works together to meet growing demands.
 
@@ -32,8 +24,6 @@ With the humongous amount of data generated today, its storage and computation h
 
 - **Data Replication**: Copy data to multiple machines to avoid data loss.
   - However, this introduces **consistency challenges**, as the system may take time to synchronize and become consistent.
-
----
 
 ## CAP Theorem
 
@@ -52,8 +42,6 @@ In modern applications, **Partition Tolerance** is non-negotiable, as network pa
 
 - **Consistency** and **Availability**.
 
----
-
 ## Example Scenario
 
 Suppose we have an application with a server capacity of 500 GB. If the app becomes popular, additional storage must be added to avoid data loss.
@@ -67,5 +55,3 @@ Suppose we have an application with a server capacity of 500 GB. If the app beco
   - Banking Systems: Transactions must be accurate and consistent.
 - **Availability Preference**:
   - Social Media Platforms: A slightly outdated feed is acceptable as long as the platform remains operational.
-
----
