@@ -1,6 +1,12 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * To resolve inconsistencies in distributed systems, we implement a Vector Clock.
+ * A Vector Clock is a data structure that helps to determine the partial ordering of events
+ * in a distributed system. Each node maintains its own vector clock, which is a map from
+ * node identifiers to integer counters. 
+ */
 class VectorClock {
     private final Map<String, Integer> clock;
 
