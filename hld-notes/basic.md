@@ -10,7 +10,7 @@
      `Customer` driver approach, it is basic features like chatting or send images and stuff that the users demand.
 
    - **Non-Functional**:
-     `Quality` and Charateristic of the app.
+     `Quality` and Characteristic of the app.
      It includes Performance, Latency, Security, Reliability, Scalability, Consistency, Availability.
 
 2. Prioritize/Planing:
