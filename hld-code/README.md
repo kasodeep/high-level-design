@@ -57,3 +57,27 @@ data consistency. This process is called `hinted handoff.`
 differences between the two replicas, and not the amount of data they contain.
 
 ### SSTable <Cassandra> <Bloom Filter>
+
+## Unique IDs
+
+### Multi Master Replication
+
+- This approach uses the databases’ auto_increment feature. Instead of increasing the next ID
+by 1, we increase it by k, where k is the number of database servers in use.
+
+### UUID
+
+- A UUID is another easy way to obtain unique IDs. UUID is a 128-bit number used to identify
+information in computer systems.
+
+### Ticket Server
+
+- Ticket servers are another interesting way to generate unique IDs. Flicker developed ticket
+servers to generate distributed primary keys.
+- The idea is to use a centralized auto_increment feature in a single database server.
+
+### Twitter Snowflake Approach
+
+#### TimeStamp
+
+- The most important 41 bits make up the timestamp section. As timestamps grow with time, IDs are sortable by time.
