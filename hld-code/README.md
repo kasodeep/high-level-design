@@ -81,3 +81,17 @@ servers to generate distributed primary keys.
 #### TimeStamp
 
 - The most important 41 bits make up the timestamp section. As timestamps grow with time, IDs are sortable by time.
+
+## API Design
+
+## Hashing
+
+The hashValue consists of characters from [0-9, a-z, A-Z], containing 10 + 26 + 26 = 62
+possible characters. To figure out the length of hashValue, find the smallest n such that 62^n
+≥ 365 billion.
+
+### Hash + Collision Rsolution
+
+- To solve the collision problem, we can use in memory Bloom Filter or Guava Bloom Filter.
+
+### Base 62 Conversion
