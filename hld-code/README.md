@@ -82,8 +82,6 @@ servers to generate distributed primary keys.
 
 - The most important 41 bits make up the timestamp section. As timestamps grow with time, IDs are sortable by time.
 
-## API Design
-
 ## Hashing
 
 The hashValue consists of characters from [0-9, a-z, A-Z], containing 10 + 26 + 26 = 62
@@ -95,3 +93,14 @@ possible characters. To figure out the length of hashValue, find the smallest n 
 - To solve the collision problem, we can use in memory Bloom Filter or Guava Bloom Filter.
 
 ### Base 62 Conversion
+
+## Sync
+
+### Clock Skew
+
+- It solves the issue of local application, where we try to sync based on latest timestamp, but the server is not the source of truth.
+
+#### Base Version
+
+- Both clients agree to a base version when starting or connected online during merging, by the server.
+- Base does not magically resolve conflicts. Base makes conflicts detectable without time.
