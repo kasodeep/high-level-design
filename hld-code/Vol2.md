@@ -35,3 +35,13 @@ GET /api/search/nearby
 ### Scale
 
 ### Cache
+
+## Nearby Friends
+
+- Since, each friend moves from one location to another.
+- Redis, Pub/Sub architecture can be used to provides updates.
+- We use redis pub/sub for fanout approach, indicating scalibility.
+
+### Load Balancing
+
+- Since, the stateful web sockets provide data, `draining` can be used to load them.
