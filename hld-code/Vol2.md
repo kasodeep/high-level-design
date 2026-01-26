@@ -45,3 +45,15 @@ GET /api/search/nearby
 ### Load Balancing
 
 - Since, the stateful web sockets provide data, `draining` can be used to load them.
+
+## Google Maps
+
+1. We should have idea about how lat,long and how 3D coordinates maps to 2D coordinates.
+
+### Map Rendering
+
+- The process of tiling, where we send the required tiles depending on zoom levels by the client.
+- With `tiles` we have zoom (0) -> 1 tile. Next, when we go from high zoom to low zoom, there is 4x reduction in storage requirements.
+- We are essentially storing the tiles, for all the zoom levels.
+
+### WebGL
