@@ -57,3 +57,20 @@ GET /api/search/nearby
 - We are essentially storing the tiles, for all the zoom levels.
 
 ### WebGL
+
+## Distributed Message Queue
+
+### Pub/Sub Model
+
+### Topics/Partitions and Brokers
+
+- We divide a topic into partitions and deliver evenly across partitions. (Small subset of messages)
+- Paritions are evenly distributed across servers, called `brokers`.
+- We can keep the order of messages inside a single parition.
+- The position of message in partition is called `offset`.
+
+### Consumer Group
+
+### WAL (Write Ahead Log)
+
+1. Line number to use as the offset, when the size increases we create a new segment(file).
